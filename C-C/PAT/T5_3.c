@@ -1,7 +1,7 @@
 #include"stdio.h"
 int main()
 {
-	char word;
+	char word,nextword;
 	int n;
 	scanf("%c",&word);
 	scanf("%d",&n);
@@ -10,34 +10,33 @@ int main()
 		printf("%c",word);
 		return 0;
 	}
-	int count=0,a;
+	int count=0,a,i;
 	a=(n-1)/2;
-	for(int i=1;i<=a;i++)
+	for(i=1;i<=a;i++)
 		printf(" ");
-	printf("%c\n",word);	
+	printf("%c\n",word);
 	while(count!=a)
 	{
 		count++;
-		for(int i=1;i<=a-count;i++)
+		for(i=1;i<=a-count;i++)
 			printf(" ");
 		printf("%c",(char)(word+count));
-		for(int i=1;i<=2*count-1;i++)
+		for(i=1;i<=2*count-1;i++)
 			printf(" ");
 		printf("%c\n",(char)(word+count));
 	}
 	while(count!=1)
 	{
 		count--;
-		for(int i=1;i<=a-count;i++)
+		for(i=1;i<=a-count;i++)
 			printf(" ");
 		printf("%c",(char)(word+count));
-		for(int i=1;i<=2*count-1;i++)
+		for(i=1;i<=2*count-1;i++)
 			printf(" ");
 		printf("%c\n",(char)(word+count));
 	}
-	for(int i=1;i<=a;i++)
+	for(i=1;i<=a;i++)
 		printf(" ");
 	printf("%c",word);
 	return 0;
-} 
-
+}

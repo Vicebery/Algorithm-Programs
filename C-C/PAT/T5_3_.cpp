@@ -14,30 +14,29 @@ int main()
 	a=(n-1)/2;
 	for(int i=1;i<=a;i++)
 		printf(" ");
-	printf("%c\n",word);	
+	printf("%c\n",word);
 	while(count!=a)
 	{
 		count++;
 		for(int i=1;i<=a-count;i++)
 			printf(" ");
-		printf("%c",(char)(word+count));
+		printf("%c",char(word+count));
 		for(int i=1;i<=2*count-1;i++)
 			printf(" ");
-		printf("%c\n",(char)(word+count));
+		printf("%c\n",char(word+count));
 	}
 	while(count!=1)
 	{
 		count--;
 		for(int i=1;i<=a-count;i++)
 			printf(" ");
-		printf("%c",(char)(word+count));
+		printf("%c",char(word+count));
 		for(int i=1;i<=2*count-1;i++)
 			printf(" ");
-		printf("%c\n",(char)(word+count));
+		printf("%c\n",char(word+count));
 	}
 	for(int i=1;i<=a;i++)
 		printf(" ");
 	printf("%c",word);
 	return 0;
-} 
-
+}
