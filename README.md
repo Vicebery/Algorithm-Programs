@@ -1,2 +1,2 @@
 # Algorithm-Programs
-some small programs for learning algorithm
+save some C/C++ code , some small programs for learning algorithm
