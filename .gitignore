@@ -1,0 +1,8 @@
+/out/
+.classpath
+.project
+.settings
+.idea
+.gitignore
+pom.xml
+/bin/
