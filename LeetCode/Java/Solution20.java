@@ -46,19 +46,9 @@ public class Solution20 {
     static boolean bracketsIsValid(char a, char b){
         if(a == '(' && b == ')' || a == '[' && b == ']' || a == '{' && b == '}')
             return true;
-        else return false;
+        else {
+            return false;
+        }
     }
 
-    /**
-     * @Description: 658 https://leetcode.com/problems/find-k-closest-elements/
-     * @param: [arr, k, x]
-     * @Return: java.util.List<java.lang.Integer>
-     * @Author: vicebery
-     * @Date: 2019/8/29
-     **/
-    public static List<Integer> findClosestElements(int[] arr, int k, int x) {
-        List<Integer> res = new ArrayList<Integer>(k);
-
-        return res;
-    }
 }
