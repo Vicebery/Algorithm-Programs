@@ -27,7 +27,7 @@ public class Solution21 {
     }
 
     /**
-     * @Description: https://leetcode-cn.com/problems/merge-two-sorted-lists/
+     * @Description: https://leetcode-cn.com/problems/merge-two-sorted-lists/ 合并排序链表
      * @Author: vicebery
      * @Date: 2020/4/24
      **/

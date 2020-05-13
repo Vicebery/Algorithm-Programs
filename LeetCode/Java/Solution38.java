@@ -7,7 +7,7 @@ public class Solution38 {
     }
 
     /**
-     * @Description: https://leetcode-cn.com/problems/count-and-say/
+     * @Description: https://leetcode-cn.com/problems/count-and-say/ 读数字个数，递归调用
      * @Author: vicebery
      * @Date: 2020/
      **/
