@@ -12,15 +12,17 @@ public class Solution122 {
      * @Date: 2020/0518
      **/
     public static int maxProfit(int[] prices) {
-        int res = 0;
-        int minPrice = Integer.MAX_VALUE;
-        for (int i = 0; i < prices.length; i++) {
-            if (prices[i] < minPrice) {
-                minPrice = prices[i];
-            } else if (res < prices[i] - minPrice) {
-                res = prices[i] - minPrice;
-            }
+        int i = 0, maxProfit = 0;
+        int valley, peak;
+        while (i < prices.length - 1) {
+            while (i < prices.length - 1 && prices[i] >= prices[i + 1])
+                i++;
+            valley = prices[i];
+            while (i < prices.length - 1 && prices[i] <= prices[i + 1])
+                i++;
+            peak = prices[i];
+            maxProfit += peak - valley;
         }
-        return res;
+        return maxProfit;
     }
 }
