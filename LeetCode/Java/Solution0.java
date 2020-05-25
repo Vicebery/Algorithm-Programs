@@ -6,15 +6,6 @@ public class Solution0 {
         System.out.println();
     }
 
-//    public static class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//
-//        TreeNode(int x) {
-//            val = x;
-//        }
-//    }
     /**
      * @Description:
      * @Author: vicebery
