@@ -1,8 +1,10 @@
 package Java;
 
+
 public class Solution283 {
     public static void main(String[] args){
         int[] a = {0,1,2,0,3,0};
+        moveZeroes(a);
         for(int num:a)
         System.out.println(num);
     }
@@ -27,5 +29,4 @@ public class Solution283 {
             nums[nums.length - i] = 0;
         }
     }
-
 }
