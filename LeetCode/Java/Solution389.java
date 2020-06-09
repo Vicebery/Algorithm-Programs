@@ -25,7 +25,7 @@ public class Solution389 {
         return 'a';
     }
 
-    // 异或运算 
+    // 异或运算
     public static char findTheDifference2(String s, String t) {
         char res = 0;
         int lens = s.length();
