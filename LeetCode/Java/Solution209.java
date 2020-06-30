@@ -11,6 +11,7 @@ public class Solution209 {
      * @Author: vicebery
      * @Date: 2020/0615
      **/
+    // 双指针
     public static int minSubArrayLen(int s, int[] nums) {
         int n = nums.length;
         if (n == 0) {
