@@ -14,16 +14,13 @@ public class Solution861 {
      * @Date: 2020/0630
      **/
     public  int matrixScore(int[][] A) {
-        int res = 0;
         int col = A[0].length;
         int row = A.length;
         // 第一列一定全为1
-        res = 1<<col * row;
+        int res = (1<<(col-1)) * row; // * 优先级高于位操作符
         for(int i = 0;i<row;i++){
-            for(int j = 0;j<col;j++){
-                if(j==0 && A[i][j]==1){
-                    break;
-                }else{
+            if(A[i][0]==0){
+                for(int j = 0;j<col;j++){
                     A[i][j] = A[i][j]^1;
                 }
             }
@@ -35,11 +32,8 @@ public class Solution861 {
                     count++;
                 }
             }
-            if(count>row/2){
-                res += 1<<(col-i)*count;
-            }else{
-                res += 1<<(col-i)*(row-count);
-            }
+            count = Math.max(count, row-count);
+            res += (1<<(col-i-1))*count;
         }
         return res;
     }
