@@ -1,5 +1,8 @@
 package Java;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Solution659 {
     public static void main(String[] args){
         int[] arg = {1,2,3,3,4,4,5,5};
@@ -14,16 +17,30 @@ public class Solution659 {
      * @Date: 2020/0628
      **/
     public boolean isPossible(int[] nums) {
-        for(int i=1;i<nums.length;i++){
-            int start = i-1;
-            while(i<nums.length){
-                if(nums[i-1]==nums[i]-1 || nums[i-1]==nums[i]){
-                    i++;
-                }else{
-                    break;
-                }
+        Map<Integer, Integer> hash = new HashMap<>();
+        Map<Integer, Integer> tail = new HashMap<>();
+        for (int n : nums) {
+            if (hash.containsKey(n)) {
+                int old = hash.get(n);
+                hash.replace(n, old + 1);
+            } else {
+                hash.put(n, 1);
             }
-            if(i-start<3){
+            tail.put(n,0);
+        }
+        for (int cur: nums) {
+            if (hash.get(cur) == 0) {
+                continue;
+            } else if (hash.get(cur) > 0 && tail.containsKey(cur-1) && tail.get(cur - 1) > 0) {
+                hash.put(cur, hash.get(cur) - 1);
+                tail.put(cur - 1, tail.get(cur - 1) - 1);
+                tail.put(cur, tail.get(cur) + 1);
+            } else if (hash.get(cur) > 0 && hash.containsKey(cur+1) && hash.get(cur + 1) > 0 && hash.containsKey(cur+2) && hash.get(cur + 2) > 0) {
+                hash.put(cur, hash.get(cur) - 1);
+                hash.put(cur + 1, hash.get(cur + 1) - 1);
+                hash.put(cur + 2, hash.get(cur + 2) - 1);
+                tail.put(cur + 2, tail.get(cur + 2) + 1);
+            } else {
                 return false;
             }
         }
