@@ -9,7 +9,7 @@ public class Solution649 {
     }
 
     /**
-     * @Description: https://leetcode-cn.com/problems/dota2-senate/
+     * @Description: https://leetcode-cn.com/problems/dota2-senate/ Dota2 参议院
      * @Author: vicebery
      * @Date: 2020/0707
      **/
