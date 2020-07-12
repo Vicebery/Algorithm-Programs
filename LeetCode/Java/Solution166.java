@@ -7,7 +7,7 @@ public class Solution166 {
         int[] arg = {1,2};
         Solution166 s = new Solution166();
 
-        System.out.println(s.fractionToDecimal(-50,8));
+        System.out.println(s.fractionToDecimal(1,6));
     }
 
     /**
