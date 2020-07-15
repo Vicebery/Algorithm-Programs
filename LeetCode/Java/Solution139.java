@@ -13,7 +13,7 @@ public class Solution139 {
     }
 
     /**
-     * @Description: https://leetcode-cn.com/problems/word-break/
+     * @Description: https://leetcode-cn.com/problems/word-break/ 单词拆分
      * @Author: vicebery
      * @Date: 2020/0714
      **/
