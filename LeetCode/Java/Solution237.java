@@ -12,11 +12,14 @@ public class Solution237 {
      * @Date: 2020/0529
      **/
 
-public class ListNode {
-    int val;
-    ListNode next;
-    ListNode(int x) { val = x; }
-}
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        ListNode(int x) {
+            val = x;
+        }
+    }
 
     public static void deleteNode(ListNode node) {
         if(node == null){

@@ -9,10 +9,11 @@ public class Permutation {
     public static void main(String[] args){
         int[] arr = {1,2,3,4};
         int[] tmp = new int[]{0,0,0,0};
-//        printPermutation2(arr,4, tmp, 0);
-        printSubset(arr,4, tmp, 0);
+        printPermutation(arr,4, tmp, 0);
+//        printSubset(arr,4, tmp, 0);
     }
 
+    // 字典序 全排列
     public static void printPermutation(int[] arr, int n, int[] tmp, int cur){
         if (cur == n) {   //判断填充完成，输出
             for (int i = 0; i < n; i++) {
@@ -32,6 +33,7 @@ public class Permutation {
         }
     }
 
+    // 字典序 全排列 去除相同元素影响
     public static void printPermutation2(int[] arr, int n, int[] tmp, int cur){
         if (cur == n) {
             for (int i = 0; i < n; i++) {
@@ -55,6 +57,8 @@ public class Permutation {
                 }
             }
     }
+
+    // 打印子集 字典序
     public static void printSubset(int[] arr, int n, int[] tmp, int cur){
         for (int i = 0; i < cur; i++) {
             System.out.print(tmp[i] + " ");
