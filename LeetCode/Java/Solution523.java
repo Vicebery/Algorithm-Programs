@@ -12,7 +12,7 @@ public class Solution523 {
     }
 
     /**
-     * @Description: https://leetcode-cn.com/problems/continuous-subarray-sum/
+     * @Description: https://leetcode-cn.com/problems/continuous-subarray-sum/ 连续的子数组和
      * @Author: vicebery
      * @Date: 2020/0810
      **/
