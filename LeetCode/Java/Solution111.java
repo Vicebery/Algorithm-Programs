@@ -25,7 +25,9 @@ public class Solution111 {
         if (root.left == null && root.right == null) return 1;
         int leftMinDepth = minDepth(root.left);
         int rightMinDepth = minDepth(root.right);
-        if (root.left == null || root.right == null) return leftMinDepth + rightMinDepth + 1;
+        if (root.left == null || root.right == null) {
+            return leftMinDepth + rightMinDepth + 1;
+        }
         return Math.min(leftMinDepth, rightMinDepth) + 1;
     }
 }
